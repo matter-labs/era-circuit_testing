@@ -1,0 +1,10 @@
+[package]
+name = "circuit_testing"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bellman = { package = "bellman_ce", git = "https://github.com/matter-labs/bellman", branch = "dev", features = ["multicore"] }
+# bellman = { package = "bellman_ce", path = "../bellman", features = ["multicore"] }
