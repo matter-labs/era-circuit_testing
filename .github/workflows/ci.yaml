@@ -12,6 +12,8 @@ jobs:
         with:
           toolchain: nightly-2023-04-17
       - run: cargo build --verbose --all-features
+      - name: Download setup key for test.
+        run: wget https://storage.googleapis.com/matterlabs-setup-keys-us/setup-keys/setup_2%5E26.key
       - run: RUSTFLAGS="-Awarnings" cargo test --verbose --all-features
 
   formatting:
